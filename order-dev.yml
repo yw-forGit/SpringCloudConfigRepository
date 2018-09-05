@@ -17,3 +17,6 @@ spring:
   application:
     # 程序名称
     name: order
+    
+evn:
+  dev
