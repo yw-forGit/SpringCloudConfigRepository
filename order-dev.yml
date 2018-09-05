@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      # 向哪个Eureka服务注册
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 9762
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    # 每个微服务都有单独的数据存储，这里为了简单，都是用同一个
+    url: jdbc:mysql://localhost:3306/db_ordering?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+  application:
+    # 程序名称
+    name: order
