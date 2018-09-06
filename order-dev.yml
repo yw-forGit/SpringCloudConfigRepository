@@ -18,5 +18,5 @@ spring:
     # 程序名称
     name: order
     
-en:
+env:
   dev
