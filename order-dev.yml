@@ -12,7 +12,7 @@ spring:
   # rabbitmq的配置，不配置就会使用默认的配置
   rabbitmq: 
     host: localhost
-    port: 5762
+    port: 5672
     username: guest
     password: guest
     
