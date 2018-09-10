@@ -15,9 +15,5 @@ spring:
     username: guest
     password: guest
     
-  application:
-    # 程序名称
-    name: order
-    
 env:
   dev5
