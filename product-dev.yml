@@ -5,6 +5,8 @@ spring:
     url: jdbc:mysql://localhost:3306/db_ordering?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: 123456
+  jpa: 
+    show-sql: true
   
   # rabbitmq的配置，不配置就会使用默认的配置
   rabbitmq: 
