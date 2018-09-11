@@ -17,5 +17,10 @@ spring:
     username: guest
     password: guest
     
+  # redis
+  redis:
+    host: localhost
+    port: 6379
+    
 env:
   dev5
