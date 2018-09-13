@@ -1,0 +1,27 @@
+
+# 暴露所有接口。以前的写法是management:endpoints:web:expose: "*"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# 自定义路由规则
+zuul:
+  routes:
+    # 这个名字可以随便起
+    myRoute:
+      # 表示所有以myProduct开头的url，都会路由转发到product服务
+      path: /myProduct/**
+      serviceId: product
+    # 简洁写法。表示所有以myProduct开头的url，都会路由转发到product服务
+    # product: /myProduct/**
+
+      # 不过滤敏感头，让cookie等信息也一起路由到对应的服务
+      sensitiveHeaders:
+
+#  # 排除某些路由，即禁止某些接口的访问，注意传递的参数是Set（点进去就能知道），yml使用表示Set是使用-
+#  ignored-patterns:
+#    - /product/product/test
+#    - /myProduct/product/test
+#    # - /**/product/test  # 也可以使用匹配的方式，表示以/product/test结尾的链接都禁止访问
