@@ -1,6 +1,10 @@
 
 # 暴露所有接口。以前的写法是management:endpoints:web:expose: "*"
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 # 自定义路由规则
 zuul:
