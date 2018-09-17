@@ -8,6 +8,9 @@ management:
 
 # 自定义路由规则
 zuul:
+  # 在这设置，表示全部服务忽略敏感头（全部服务都可以传递cookie等敏感信息），区别于对局部规则的设置。
+  sensitive-headers:
+  
   routes:
     # 这个名字可以随便起
     myRoute:
