@@ -2,7 +2,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     # 每个微服务都有单独的数据存储，这里为了简单，都是用同一个
-    url: jdbc:mysql://localhost:3306/db_ordering?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://192.168.68.1:3306/db_ordering?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: 123456
   jpa: 
@@ -10,13 +10,13 @@ spring:
   
   # rabbitmq的配置，不配置就会使用默认的配置
   rabbitmq: 
-    host: localhost
+    host: 192.168.68.1
     port: 5672
     username: guest
     password: guest
     
   # redis
   redis:
-    host: localhost
+    host: 192.168.68.1
     port: 6379
     
